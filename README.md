@@ -7,7 +7,10 @@ Other Lab IA projects can be found at the main GitHub repo. In particular, the r
 Piaf-ranker is a a French relevance judgment model that uses  [CamemBERT](https://arxiv.org/abs/1911.03894) as a base and scores a text passage based on its relevance to a certain query.
 The model is utilized to re-rank documents In a multi-stage ranking approach. 
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+<p align="center">
+      <img src='images/retrerank.png'/>
+</p>
+
 ## Model training 
 The model is trained on french langauge data, using combination of three French Q&A datasets.
 ### Data
