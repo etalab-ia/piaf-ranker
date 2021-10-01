@@ -28,7 +28,7 @@ The model was trained on the positive passage associated with each question and 
 
 |  | Recall@1 | MAP |
 | ------ | ------ | ------ |
-| BM25 | 0.62 | 0.71 |
+| BM25 | 0.63 | 0.71 |
 | piaf-ranker |0.75 |0.80|
 
 
