@@ -56,7 +56,7 @@ parameters = {
 
 ### Evaluate performances for the stack PIAF 
 To evaluate the model directly on the pretrained model
-- Download the model weights file here
+- Download the model weights file [here](https://drive.google.com/file/d/1ToGICur1OPmnU7j7G8HRisbPnkXOK_aA/view?usp=sharing)
 - Prepare your knowledge base in the form of a json file formated with the squad format. More information regarding the format of the file can be found [here](https://etalab-ia.github.io/knowledge-base/piaf/howtos/integrate.html#quel-format-pour-les-donnees)
 - Define the experiment parameters with src/config/test_config.py
 
