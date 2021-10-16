@@ -1,13 +1,15 @@
 parameters = {
-    "k": 10,
+    "k": 25,
     "retriever_type": 'bm25',
-    "squad_dataset": "../data/SQuAD-v1.1-dev_fr_ss999_awstart2_net.json",  
+    "squad_dataset": "../data/squad/SquadFr.json",  
+    #"squad_dataset": "../data/squad/tiny_test.json", 
     "filter_level": None,
     "boosting": 1,
     "preprocessing": False,
     "split_by": "word",  # Can be "word", "sentence", or "passage"
     "split_length": 512,
     "split_respect_sentence_boundary": True,
+    'output_name' : 'SquadFr',
 }
 
 
