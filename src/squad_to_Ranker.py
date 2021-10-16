@@ -14,7 +14,7 @@ from utils.elasticsearch_management import (delete_indices,
 
 
 from config.dataset_creation_config import parameters,SQUAD_MAPPING
-from utils.dataset_utils import extract_documents_and_labels,create_ranker_dataset,split_dataset
+from utils.dataset_utils import extract_documents_and_labels,create_ranker_dataset,split_dataset,delete_repeated_questions
 from utils.utils import evaluate
 
 
@@ -32,7 +32,7 @@ preprocessing = parameters["preprocessing"]
 split_by = parameters["split_by"]
 split_length = parameters["split_length"]
 split_respect_sentence_boundary = parameters["split_respect_sentence_boundary"]
-
+output_name = parameters['output_name']
 
 
 # indexes for the elastic search
@@ -111,26 +111,15 @@ for k,v in results.items():
     print(k,':',v)
 
 
-    
 #delete repeated questions
 dataset = delete_repeated_questions(dataset)
 
-#split data
-train,dev,test = split_dataset(dataset)
-
-
-with open('../data/raw/ranker_train.json', 'w') as fp:
-       json.dump(train, fp)
-        
-with open('../data/raw/ranker_dev.json', 'w') as fp:
-       json.dump(dev, fp)
-               
-with open('../data/raw/ranker_test.json', 'w') as fp:
-       json.dump(test, fp)
+with open('../data/raw/'+output_name+'-ranker.json', 'w') as fp:
+       json.dump(dataset, fp)
 
 
 
-        
+
 
 
 
