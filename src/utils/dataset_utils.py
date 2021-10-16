@@ -65,7 +65,7 @@ def create_ranker_dataset(question_label_dict_list,
                           retrieved_docs_list,
                           keep_positives=True):
     
-     """
+    """
     turn label_list and doc_list into a one list to save as json
     
     input :
@@ -137,7 +137,7 @@ def delete_repeated_questions(dataset):
 
 
 
-def split_dataset(list_,train_ratio = 0.8,dev_ratio = 0.1):
+def split_dataset(list_,train_ratio = 0.8):
     '''
     Split dataset to train,dev and test sets
     
@@ -145,11 +145,9 @@ def split_dataset(list_,train_ratio = 0.8,dev_ratio = 0.1):
     
     random.shuffle(list_)
     trainning_index = int(len(list_) * train_ratio)
-    dev_index = int(len(list_) * (train_ratio+dev_ratio))
     train = list_[:trainning_index]
-    dev = list_[trainning_index:dev_index]
-    test = list_[dev_index:]
+    dev = list_[trainning_index:]
     
-    return train,dev,test
+    return train,dev
     
     
